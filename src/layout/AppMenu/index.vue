@@ -6,7 +6,7 @@
     background-color="#304156"
     text-color="#bcc0c5"
     active-text-color="#2d8cf0"
-    :collapse="false"
+    :collapse="store.isCollapse"
     router>
     <el-menu-item index="/">
       <el-icon><location /></el-icon>
@@ -39,7 +39,8 @@
 </template>
 
 <script lang="ts" setup>
-
+import { useAlertsStore } from '@/store/index'
+const store = useAlertsStore()
 </script>
 
 <style lang="scss" scoped>

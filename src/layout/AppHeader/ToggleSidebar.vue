@@ -1,18 +1,14 @@
 <template>
-  <i
-    :class="collapseIcon"
-    @click="handleCollapse"
-  />
+  <el-icon @click="handleCollapse"><Fold v-show="store.isCollapse"/><Expand v-show="store.isCollapse === false"/></el-icon>
 </template>
 
 <script lang="ts" setup>
-import { computed } from 'vue'
-
-const collapseIcon = computed(() => {
-  return 'el-icon-s-fold'
-})
+import { useAlertsStore } from '@/store/index'
+import { Expand, Fold } from '@element-plus/icons'
+const store = useAlertsStore()
 
 const handleCollapse = () => {
+  store.chageCollapse()
 }
 </script>
 

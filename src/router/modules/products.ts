@@ -17,7 +17,7 @@ const routes: RouteRecordRaw = {
     },
     {
       path: 'add_product',
-      name: 'product-add',
+      name: 'add-product',
       component: () => import('@/views/products/add/index.vue'),
       meta: {
         title: '添加项目'
